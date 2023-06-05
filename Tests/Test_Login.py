@@ -16,3 +16,8 @@ def test_valid_login(driver):
         login.insert_user_name()
         login.insert_password()
         login.click_login()
+
+    with allure.step('Verifying the URL after login'):
+        expected_url = 'https://www.saucedemo.com/inventory.html'
+        actual_url = driver.current_url
+        assert actual_url == expected_url, f"URL mismatch. Expected: {expected_url}, Actual: {actual_url}"
