@@ -112,6 +112,12 @@ class Login(Commons):
     def insert_password(self):
         self.insert(self.PASSWORD, 'secret_sauce')
 
+    def insert_invalid_user_name(self):
+        self.insert(self.USERNAME, 'Mike123')
+
+    def insert_invalid_password(self):
+        self.insert(self.PASSWORD, '789456123')
+
     def click_login(self):
         self.click(self.LOGIN_CLICK)
 
@@ -136,3 +142,9 @@ class Login(Commons):
 
     def click_on_remove_from_cart_btn(self):
         self.click(self.REMOVE_FROM_CART_BTN)
+
+    def get_error_message(self):
+        pass
+
+    def is_login_page(self):
+        pass
