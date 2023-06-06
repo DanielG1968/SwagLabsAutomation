@@ -50,3 +50,25 @@ def test_add_to_cart_backpack(driver):
         assert is_item_in_cart, f"{expected_item_name} is not found in the cart"
 
 
+@allure.epic('Test add to cart Bike Light')
+@allure.id(3)
+@allure.title("Adding to cart a backpack")
+@allure.description('Product will be added to the cart')
+@allure.severity(allure.severity_level.CRITICAL)
+def test_add_to_cart_bike_light(driver):
+    login = Login(driver)
+    PP = ProductPage(driver)
+
+    with allure.step('Inserting valid user name and login and click login btn'):
+        login.insert_user_name()
+        login.insert_password()
+        login.click_login()
+
+    with allure.step('Adding to cart the sauce Labs Bike Light'):
+        PP.add_to_cart_bike_light()
+
+    with allure.step('Verifying the presence of the Sauce Labs Backpack in the cart'):
+        expected_item_name = 'Sauce Labs Bike Light'
+        is_item_in_cart = PP.is_item_in_cart(expected_item_name)
+        assert is_item_in_cart, f"{expected_item_name} is not found in the cart"
+

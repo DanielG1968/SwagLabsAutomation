@@ -132,13 +132,12 @@ class Login(Commons):
 
     CART_BTN = (U.By.CSS_SELECTOR, '#shopping_cart_container > a')
     REMOVE_FROM_CART_BTN = (U.By.CSS_SELECTOR, '#remove-sauce-labs-backpack')
-    CHECK_OUT_BTN = (U.By.CSS_SELECTOR, '#checkout')
+
 
     def click_on_cart_btn(self):
         self.click(self.CART_BTN)
 
-    def click_on_checkout_btn(self):
-        self.click(self.CHECK_OUT_BTN)
+
 
     def click_on_remove_from_cart_btn(self):
         self.click(self.REMOVE_FROM_CART_BTN)
