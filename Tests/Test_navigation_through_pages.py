@@ -28,7 +28,7 @@ def test_navigation_to_all_items_page(driver):
 
 
 @allure.epic('Test Navigation to all items page')
-@allure.id(1)
+@allure.id(2)
 @allure.title("Log in and click on the all items button")
 @allure.description('All items page will be displayed')
 @allure.severity(allure.severity_level.NORMAL)
