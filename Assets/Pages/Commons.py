@@ -121,23 +121,15 @@ class Login(Commons):
     def click_login(self):
         self.click(self.LOGIN_CLICK)
 
-    # MENU BTN LOCTOR + ACTION
 
-    Menu_BTN = (U.By.CSS_SELECTOR, '#react-burger-menu-btn')
-
-    def click_on_menu_BTN(self):
-        self.click(self.Menu_BTN)
 
     # CART LOCATORS + ACTIONS
 
     CART_BTN = (U.By.CSS_SELECTOR, '#shopping_cart_container > a')
     REMOVE_FROM_CART_BTN = (U.By.CSS_SELECTOR, '#remove-sauce-labs-backpack')
 
-
     def click_on_cart_btn(self):
         self.click(self.CART_BTN)
-
-
 
     def click_on_remove_from_cart_btn(self):
         self.click(self.REMOVE_FROM_CART_BTN)
@@ -147,3 +139,18 @@ class Login(Commons):
 
     def is_login_page(self):
         pass
+
+    # Pages locators
+    Menu_BTN = (U.By.CSS_SELECTOR, '#react-burger-menu-btn')
+    All_items_page = (U.By.CSS_SELECTOR, '#inventory_sidebar_link')
+    About_page = (U.By.CSS_SELECTOR, '#about_sidebar_link')
+
+    def click_on_menu_BTN(self):
+        self.click(self.Menu_BTN)
+
+    def click_on_about_btn(self):
+        self.click(self.About_page)
+
+    def click_on_all_items_BTN(self):
+        self.click(self.All_items_page)
+
