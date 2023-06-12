@@ -29,3 +29,15 @@ class CartPage(Commons):
 
     def click_on_finish_btn(self):
         self.click(self.FINISH_BTN)
+
+    def insert_invalid_first_name(self):
+        self.insert(self.FIRST_NAME, '86979')
+
+    def insert_invalid_last_name(self):
+        self.insert(self.LAST_NAME, '789466/')
+
+    def insert_invalid_zip_code(self):
+        self.insert(self.ZIP_CODE, 'ZIP CODE')
+
+    def is_error_message_displayed(self):
+        pass

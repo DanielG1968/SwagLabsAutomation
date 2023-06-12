@@ -13,7 +13,11 @@ class ProductPage(Commons):
     add_to_cart_Sauce_labs_ALL_THE_THINGS_TSHIRT = (U.By.CSS_SELECTOR,
                                                     '#add-to-cart-test\.allthethings\(\)-t-shirt-\(red\)')
     REMOVE_PRODUCT_BTN = (U.By.CSS_SELECTOR, '#remove-sauce-labs-backpack')
-
+    filter_by_name = (U.By.CSS_SELECTOR, '#header_container > div.header_secondary_container > div > span > select')
+    filter_price_high_to_low = (U.By.CSS_SELECTOR, '#header_container > div.header_secondary_container > div > span > '
+                                                   'select > option:nth-child(4)')
+    filter_price_low_to_high = (U.By.CSS_SELECTOR, '#header_container > div.header_secondary_container > div > span > '
+                                                   'select > option:nth-child(3)')
     # Adding to cart actions
 
     def add_to_cart_backpack(self):
@@ -40,4 +44,25 @@ class ProductPage(Commons):
         self.click(self.REMOVE_PRODUCT_BTN)
 
     def is_item_in_cart(self, expected_item_name):
+        pass
+
+    def filter_items_by_name_A_to_Z(self):
+        self.click(self.filter_by_name)
+
+    def filter_items_by_price_high_to_low(self):
+        self.click(self.filter_price_high_to_low)
+
+    def filter_items_by_price_low_to_high(self):
+        self.click(self.filter_price_low_to_high)
+
+    def is_items_sorted_A_to_Z(self):
+        pass
+
+    def is_items_sorted_high_to_low(self):
+        pass
+
+    def is_items_sorted_low_to_high(self):
+        pass
+
+    def is_items_sorted_by_price_low_to_high(self):
         pass

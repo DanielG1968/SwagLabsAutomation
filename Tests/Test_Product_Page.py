@@ -94,3 +94,62 @@ def test_add_to_cart_bike_light(driver):
         expected_item_name = 'Sauce Labs Bolt T-Shirt'
         is_item_in_cart = PP.is_item_in_cart(expected_item_name)
         assert is_item_in_cart, f"{expected_item_name} is not found in the cart"
+
+
+@allure.epic('Test Items filtering by name A-Z')
+@allure.id(4)
+@allure.title("Clicking the filter option")
+@allure.description('Items will be filtered by name')
+@allure.severity(allure.severity_level.CRITICAL)
+def test_add_to_cart_bike_light(driver):
+    login = Login(driver)
+    PP = ProductPage(driver)
+
+    with allure.step('Inserting valid user name and login and click login btn'):
+        login.insert_user_name()
+        login.insert_password()
+        login.click_login()
+
+    with allure.step('Clicking on the filter by name option'):
+        PP.filter_items_by_name_A_to_Z()
+        assert PP.is_items_sorted_A_to_Z(), "Test failed: Items are not sorted by name A to Z"
+
+
+@allure.epic('Test Items filtering by Price(High-Low)')
+@allure.id(5)
+@allure.title("Clicking the filter option")
+@allure.description('Items will be filtered by price')
+@allure.severity(allure.severity_level.CRITICAL)
+def test_add_to_cart_bike_light(driver):
+    login = Login(driver)
+    PP = ProductPage(driver)
+
+    with allure.step('Inserting valid user name and login and click login btn'):
+        login.insert_user_name()
+        login.insert_password()
+        login.click_login()
+
+    with allure.step('Clicking on the filter by high to low price option'):
+        PP.filter_items_by_price_high_to_low()
+        assert PP.is_items_sorted_high_to_low(), "Test failed: Items are not sorted by high to low price"
+
+
+@allure.epic('Test Items filtering by price(Low-High)')
+@allure.id(6)
+@allure.title("Clicking the filter option")
+@allure.description('Items will be filtered by price')
+@allure.severity(allure.severity_level.CRITICAL)
+def test_add_to_cart_bike_light(driver):
+    login = Login(driver)
+    PP = ProductPage(driver)
+
+    with allure.step('Inserting valid user name and login and click login btn'):
+        login.insert_user_name()
+        login.insert_password()
+        login.click_login()
+
+    with allure.step('Clicking on the filter by low to high price option'):
+        PP.filter_items_by_price_low_to_high()
+        assert PP.is_items_sorted_by_price_low_to_high(), "Test failed: Items are not sorted by price low to high"
+
+
