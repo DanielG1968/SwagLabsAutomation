@@ -1,4 +1,4 @@
-# Project Name
+# SauceLabs Automation project
 This is a Python project for testing login functionality, product page, API, navigation through pages, and checkout functionality. It includes several test files and supporting files.
 
 # Project Structure
@@ -15,8 +15,7 @@ conftest.py: This file is a pytest configuration file that provides fixtures and
 test_check_out.py: This file contains test cases related to the checkout functionality.
 README.md: This file (the one you are currently reading) provides an overview of the project and its contents.
 
-Project Name
-This is a Python project for testing login functionality, product page, API, navigation through pages, and checkout functionality. It includes several test files and supporting files.
+
 
 Project Structure
 The project directory consists of the following files and folders:
